@@ -24,7 +24,16 @@ export default function commentReducer(state = initialState, action) {
             //EITHER an empty array (because when everything is first evaluated it is empty), OR
             //our action's payload's comment itself. 
 
-            return { ...state, comments: { ...state.comments, [action.payload.id]: [...(state.comments[action.payload.id] || []), action.payload.comment] } };
+            return { 
+                ...state, 
+                comments: { 
+                    ...state.comments, 
+                    [action.payload.id]: [
+                        ...(state.comments[action.payload.id] || []), 
+                        action.payload.comment] 
+                } 
+            };
+        
         case DELETE_COMMENT:
             return { 
                 ...state, 
