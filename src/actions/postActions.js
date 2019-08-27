@@ -8,5 +8,5 @@ export const addPost = post => {
 //TODO: how do you fucking delete a post what the fuuuuuuuuuck
 export const DELETE_POST = 'DELETE_POST';
 export const deletePost = post => {
-    return { type: DELETE_POST, payload: {} };
+    return { type: DELETE_POST, payload: { id: post.id } };
 };
