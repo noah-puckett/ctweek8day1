@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // eslint-disable-next-line
 module.exports = {
-    entry: './src/index.js',
+    entry: './labPracticeSrc/index.js',
     output: {
         filename: 'bundle.[hash].js',
         publicPath: '/'
